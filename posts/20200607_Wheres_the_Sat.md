@@ -119,7 +119,7 @@ where q0, s, tau are fit parameters. Specific values can be obtained by inspecti
 
 (for r < R + 158 km, SGP4 uses a different set).
 With air resistance included in Newton's equations,
-the deviation from SGP4 reduces by half for the ISS (to 2 km/day), which is good but not good enough.
+the deviation from SGP4 reduces by half for the ISS to 2 km/day, which is good but not good enough.
 
 Is 2 km/day simply the inherent accuracy of SGP4, or does the model have some other physics? 
 Actually, no and no - the reason for the discrepancy is more subtle. 
