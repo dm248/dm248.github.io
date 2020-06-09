@@ -56,7 +56,7 @@ those are less relevant).
 Short portions of orbits can always be considered elliptical but parameters change along the path.
 Moreover, one cannot use TLE data directly even near epoch because TLEs contain averaged quantities,
 not instantaneous values 
-(thanks to Dr. Kelso at [CelesTrack](https://celestrak.com/) for pointing that out for me).
+(thanks to Dr. Kelso at [CelesTrack](https://celestrak.com/) for pointing that out to me).
 
 ### Imperfect Earth
 
