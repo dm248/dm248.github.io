@@ -17,8 +17,8 @@ To first approximation, Earth is spherically symmetric and satellites are pointl
 ellipses with the center of Earth at one of the foci 
 (recall [Keplerian orbits](https://en.wikipedia.org/wiki/Kepler_orbit)). E.g., if you picture the "standard" 
 ellipse in the *x-y* plane with 
-semiaxes *a* and *b* along the *x* and *y* axes, and Earth at the origin, then the point of closest approach
-(perigee) is at *P* = (*a* (1-*e*), 0),
+semiaxes *a* and *b* along the *x* and *y* axes, and shift Earth to the origin, then the center of the ellipse
+will be at (-*a* *e*, 0), while the point of closest approach (perigee) at *P* = (*a* (1-*e*), 0),
 where *e* is the eccentricity.
 
 Sats in the challenge were given as a list of NORAD two-line elements 
