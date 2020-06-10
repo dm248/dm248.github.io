@@ -41,7 +41,7 @@ Once I figured the solution out, it was just a chore:
 * retry Jekyll installation and coast until the next error
  
 Eventually you win, 
-do`bundle exec jekyll serve --no-watch` and bumm!, you have a server on localhost:4000.
+do`bundle exec jekyll serve --no-watch` and tada!, you have a server on localhost:4000.
 (The flag is required due to WSL polling [limitations](https://github.com/microsoft/WSL/issues/216) and, of course, 
 you also need to say OK when Windows asks whether the server can bind to the port.)
 
