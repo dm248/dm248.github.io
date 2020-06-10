@@ -15,4 +15,10 @@ so if you are curious, [read on](/posts/20200607_Wheres_the_Sat.md)...
 
 ---
 
+# GitHub Pages
 
+##### Jun 6, 2020
+
+I decided to give [GitHub Pages](https://pages.github.com/)
+a try so that I do not have to bother with hosting these posts elsewhere.
+Take-off was quite smooth but not without a few [hiccups...](posts/20200606_GitHub_Pages.md)
