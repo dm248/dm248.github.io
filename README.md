@@ -1,5 +1,16 @@
 ###dm248.github.io
 
+# NahamCon 
+
+##### Jun 15, 2020
+
+[NahamCon CTF](https://ctftime.org/event/1067) was a fun event last weekend.
+I only had about 10 hours for it, so I did what tends to suit me best: crypto plus some misc challenges.
+Overall I scored close to 1500, which is OK but there is always room to do more.
+Here are some of my thoughts about the [problems..](/posts/20200615_NahamCon.md)
+
+---
+
 # Where's the Sat @ Hack-A-Sat
 
 ##### Jun 7, 2020
