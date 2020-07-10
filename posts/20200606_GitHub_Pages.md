@@ -45,6 +45,31 @@ do`bundle exec jekyll serve --no-watch` and tada!, you have a server on localhos
 (The flag is required due to WSL polling [limitations](https://github.com/microsoft/WSL/issues/216) and, of course, 
 you also need to say OK when Windows asks whether the server can bind to the port.)
 
+*EDIT 2020/07/09:* a recent Windows update borked my Win 10, so I had to redo everything in Linux. 
+For future reference, here are the steps that worked:
+
+* install rvm - download the [installer script](https://get.rvm.io) and run it via
+
+    `bash ./nvm_installer.sh stable --ruby --autolibs=0`
+
+    The last option ensures that it does not ask for sudo access. If it ends up compiling ruby for you, then you need to 
+have the requisite packages installed, of course.
+
+* activate rvm:`source ~/.rvm/scripts/rvm`
+* switch to rvm's current ruby:`rvm use current`
+* check that it is the correct version:`ruby -v`
+* install bundler:`gem install bundler`
+* install jekyll:`gem install jekyll`   (might be obviated by the github-pages gem installation later but who has time to test that...)
+* running jekyll fails if you do not have a file named Gemfile in the top level directory of your site.
+I forgot to add this file to the git repo when I first got Jekyll working, so I had to recreate it with contents
+
+    `gem 'github-pages', group: :jekyll_plugin`
+
+
+* install github-pages:`gem install github-pages`
+* run jekyll:`bundle exec jekyll serve` (being on real Linux, the`--no-watch`option is no longer necessary)
+
+
 ---
 
 [back](/)
