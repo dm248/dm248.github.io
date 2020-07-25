@@ -37,17 +37,17 @@ LD_PRELOAD=./mylib.so accounting
 ```
 
 (In case you recognized the tree structure in the challenge, and feel at home with it, 
-then neutering usleep is unnecessary. 
-You can then forgo Steps 1 and 3 and construct a solution directly - see closing paragraph.)
+then neutering usleep was unnecessary. 
+You could then forgo Steps 1 and 3 and construct a solution directly - see closing section.)
 
 
 ### Cursory binary analysis
 
 The first of several hints in the problem was the first output line
-*"Booting up Fancy Laser Accounting Generator (F.L.A.G.) at 0x8048878"* line, 
+*"Booting up Fancy Laser Accounting Generator (F.L.A.G.) at 0x8048878"*, 
 so the flag printing routine is at 0x8048878.
 Indeed, if you look in Ghidra,
-there is a function *print_flag()* right there:
+there is a function *print_flag()* right at that address:
 
 ```cpp
 void print_flag(void)
@@ -251,9 +251,9 @@ def fuzz(local):
    while True:
       cvals = [ randint(0, 60)  for i in range(4)]
       r, in2 = run1(cvals, local)
+      r.close()     # explicitly release file descriptors
       if not b"0x80487a6" in in2:   # check whether combo sets root correctly
          return cvals
-      r.close()     # explicitly release file descriptors
 
 
 def solve(cvals, local):
@@ -290,7 +290,7 @@ with 30 at its root (you can follow this step by step with an online
 [AVL tree visualizer](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
 To bring 25 up we need to get the left part of the tree higher by two levels.
 So insert 22 (a number between 20 and 25), then 5 (a number less than 10), and then 28 (a number between 25 and 30),
-which leads to
+in any order, which leads to
 ```
          30
        /    \
