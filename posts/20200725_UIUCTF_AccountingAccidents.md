@@ -60,7 +60,7 @@ void print_flag(void)
   else {
   ...
 ```
-with not only a tell-all name but even a detailed error message as well.
+with not only a tell-all name but even a detailed error message in case your current directory has no *flag.txt* file.
 So the question is how to get control to *print_flag()*. 
 
 If you check *main()*, you see
@@ -172,9 +172,9 @@ int * newNode(int cost,char *name)
   }
   ...
 ```
-It allocs 0x24 = 36 bytes (enough to hold 9 four-byte integers). From offset 8\*4 = 0x20 is the
+It allocs 0x24 = 36 bytes (enough to hold 9 four-byte integers). From offset 8\*4 = 0x20 it stores the
 default address 0x80487a6 used by *"the accounting software"* called after all user input has been entered,
-and we do read up to 0x15 = 21 chars from position 4*4 = 0x10.
+and we do read up to 0x15 = 21 chars that are then stored from position 4*4 = 0x10.
 Notice, 21 is 5 more than 16, so we can in fact overwrite the complete address stored at byte offsets 0x20-0x23(!).
 (The rest of the data are of no interest - if you care, nevertheless, then the 0th int is the price,
 ints 1 and 2 are pointers to the left and right leaves, while int 3 is the balance factor).
