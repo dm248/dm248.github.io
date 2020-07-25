@@ -66,7 +66,7 @@ void print_flag(void)
   ...
 ```
 with not only a tell-all name but even a detailed error message in case your current directory has no *flag.txt* file.
-So the question is how to get control to *print_flag()*. 
+So the question is how to get control flow to *print_flag()*. 
 
 If you check *main()*, you see
 
