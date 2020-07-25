@@ -270,7 +270,7 @@ solve(cvals, False)   # then solve challenge (remote)
 
 ### Direct construction
 
-After items 10, 20, 30, 40, and 25 are inserted,
+After items 10, 20, 30, 40, 50, and 25 are inserted,
 the AVL tree looks like this:
 ```
        30
@@ -295,13 +295,13 @@ which leads to
 ```
 Finally, insert 24 (a number between 22 and 25), which leads to rearrangement because the left side is now too high:
 ```
-         30                        25 
-       /    \                    /    \
+         30                         25 
+       /    \                     /    \
      20      40                 20      30
     /  \       \     ->        /  \    /  \
   10    25      50           10   22  28  40
-  /     /\                   /     \    \
- 5    22  28                5       24   50   
+  /     /\                   /     \       \
+ 5    22  28                5       24      50   
        \
        24
 ```
