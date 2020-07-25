@@ -135,6 +135,13 @@ int * insert(int *node,int cost,char *name)
   }
   else {
     ...
+        else {
+          iVar1 = leftRotate(node[1]);
+          node[1] = iVar1;
+          node = (int *)rightRotate(node);
+        }
+      }
+    }
     else {
       node = (int *)rightRotate(node);
     }
