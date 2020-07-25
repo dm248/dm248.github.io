@@ -287,7 +287,7 @@ the AVL tree looks like this:
 10    25      50
 ```
 with 30 at its root (you can follow this step by step with an online
-[AVL tree visualizator](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
+[AVL tree visualizer](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
 To bring 25 up we need to get the left part of the tree higher by two levels.
 So insert 22 (a number between 20 and 25), then 5 (a number between 0 and 10), and then 28 (a number between 25 and 30),
 which leads to
