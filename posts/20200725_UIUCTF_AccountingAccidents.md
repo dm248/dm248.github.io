@@ -182,7 +182,7 @@ default address 0x80487a6 used by *"the accounting software"* called in main (th
 and we do read up to 0x15 = 21 chars that are then stored from position 4*4 = 0x10.
 Notice, 21 is 5 more than 16, so we can in fact overwrite the complete address stored at byte offsets 0x20-0x23(!).
 
-=> ***Step 2***: give an item name of the form (16 nonzero chars) + 0x78 + 0x88 + 0x04 + 0x08.
+=> ***Step 2***: give an item name of the form (16 non-newline chars) + 0x78 + 0x88 + 0x04 + 0x08.
 
 (The rest of the data are of no interest - if you care, nevertheless, then the 0th int is the price,
 ints 1 and 2 are pointers to the left and right leaves, while int 3 is the balance factor of the node.)
