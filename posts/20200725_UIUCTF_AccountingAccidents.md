@@ -288,8 +288,8 @@ the AVL tree looks like this:
 ```
 with 30 at its root (you can follow this step by step with an online
 [AVL tree visualizer](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
-To bring 25 up we need to get the left part of the tree higher by two levels.
-So insert 22 (a number between 20 and 25), then 5 (a number less than 10), and then 28 (a number between 25 and 30),
+To bring 25 up we need to unbalance the node 30 by getting the left part of the tree higher by two levels.
+So insert 22 (a number between 20 and 25), then 5 (a number less than 20), and then 28 (a number between 25 and 30),
 in any order, which leads to
 ```
          30
