@@ -289,7 +289,7 @@ the AVL tree looks like this:
 with 30 at its root (you can follow this step by step with an online
 [AVL tree visualizer](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
 To bring 25 up we need to get the left part of the tree higher by two levels.
-So insert 22 (a number between 20 and 25), then 5 (a number between 0 and 10), and then 28 (a number between 25 and 30),
+So insert 22 (a number between 20 and 25), then 5 (a number less than 10), and then 28 (a number between 25 and 30),
 which leads to
 ```
          30
@@ -308,7 +308,7 @@ Finally, insert 24 (a number between 22 and 25), which leads to rearrangement be
     /  \       \     ->        /  \    /  \
   10    25      50           10   22  28  40
   /     /\                   /     \       \
- 5    22  28                5       24      50   
+ 5    22  28                5      24       50   
        \
        24
 ```
