@@ -36,6 +36,11 @@ and run the challenge through a script *run.scr*:
 LD_PRELOAD=./mylib.so accounting
 ```
 
+(In case you recognized the tree structure in the challenge, and feel at home with it, 
+then neutering usleep is unnecessary. 
+You can then forgo Steps 1 and 3 and construct a solution directly - see closing paragraph.)
+
+
 ### Cursory binary analysis
 
 The first of several hints in the problem was the first output line
@@ -173,14 +178,14 @@ int * newNode(int cost,char *name)
   ...
 ```
 It allocs 0x24 = 36 bytes (enough to hold 9 four-byte integers). From offset 8\*4 = 0x20 it stores the
-default address 0x80487a6 used by *"the accounting software"* called after all user input has been entered,
+default address 0x80487a6 used by *"the accounting software"* called in main (the call we want to hijack),
 and we do read up to 0x15 = 21 chars that are then stored from position 4*4 = 0x10.
 Notice, 21 is 5 more than 16, so we can in fact overwrite the complete address stored at byte offsets 0x20-0x23(!).
-(The rest of the data are of no interest - if you care, nevertheless, then the 0th int is the price,
-ints 1 and 2 are pointers to the left and right leaves, while int 3 is the balance factor).
 
 => ***Step 2***: give an item name of the form (16 nonzero chars) + 0x78 + 0x88 + 0x04 + 0x08.
 
+(The rest of the data are of no interest - if you care, nevertheless, then the 0th int is the price,
+ints 1 and 2 are pointers to the left and right leaves, while int 3 is the balance factor of the node.)
 
 ### Fuzz the solution
 
@@ -262,5 +267,43 @@ solve(cvals, False)   # then solve challenge (remote)
 
 #uiuctf{1s@beLl3_do3sNt_r3@l1y_d0_MuCh_!n_aCnH}
 ``` 
+
+### Direct construction
+
+After items 10, 20, 30, 40, and 25 are inserted,
+the AVL tree looks like this:
+```
+       30
+     /    \
+   20      40
+  /  \       \
+10    25      50
+```
+with 30 at its root (you can follow this step by step with an online
+[AVL tree visualizator](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)).
+To bring 25 up we need to get the left part of the tree higher by two levels.
+So insert 22 (a number between 20 and 25), then 5 (a number between 0 and 10), and then 28 (a number between 25 and 30),
+which leads to
+```
+         30
+       /    \
+     20      40
+    /  \       \
+  10    25      50
+  /     /\
+ 5    22  28
+```
+Finally, insert 24 (a number between 22 and 25), which leads to rearrangement because the left side is now too high:
+```
+         30                        25 
+       /    \                    /    \
+     20      40                 20      30
+    /  \       \     ->        /  \    /  \
+  10    25      50           10   22  28  40
+  /     /\                   /     \    \
+ 5    22  28                5       24   50   
+       \
+       24
+```
 
 [back](/)
