@@ -300,7 +300,8 @@ in any order, which leads to
   /     /\
  5    22  28
 ```
-Finally, insert 24 (a number between 22 and 25), which leads to rearrangement because the left side is now too high:
+Finally, insert 24 (a number between 20 and 30 not yet in the tree), 
+which leads to rearrangement because the left side is now too high:
 ```
          30                         25 
        /    \                     /    \
