@@ -116,7 +116,7 @@ If you check *main()*, you see
 * 5 items get inserted (to somewhere...)
 * a 6th item with null-pointer name gets inserted
 * 4 prices are read, and items with those prices get inserted
-* at the end it jumps to code at offset + 0x20 relative to the pointer returned by the last insert
+* at the end it jumps to an address read from offset +0x20 relative to the pointer returned by the last insert
 
 The reads for item prices are all safe - only up to 8
 chars are read, and atoi always returns some integer whatever its input is, so there is not much one can hijack there.
