@@ -4,6 +4,16 @@
 
 ### 
 
+
+# UIUCTF
+
+##### Jul 26, 2020
+
+I tried a couple problems at [UIUCTF](https://ctftime.org/event/1075) last weekend, crypto and pwn
+mostly. It had an interesting mixture of simple and hard problems with not much in between. Overall,
+it was fun and [educational...](/posts/20200726_UIUCTF.md)
+
+
 # NahamCon 
 
 ##### Jun 15, 2020
