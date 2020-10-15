@@ -4,6 +4,15 @@
 
 ### 
 
+# Curious case of shellsort
+
+##### Oct 15, 2020
+
+I tend to think back fondly of good old times when I was a student but I must have had it easy. 
+Here is an assignment someone else got recently: *Find the worst-case swap count for (13,4,1) shellsort
+of 25 elements*. The official solution was simple, just shy of 1 billion core years to run.
+It turns out that the problem *is* solvable, just not quite that way...
+
 
 # UIUCTF
 
