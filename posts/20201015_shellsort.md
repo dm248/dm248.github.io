@@ -379,3 +379,7 @@ sort using (13,4,1) shellsort*.
 What bugged me most about this problem is not that it is beyond undergrand level (I think it is)
 but that the people who gave it have very likely no idea about what it actually takes to solve it. 
 Of course, there might be some neat math shortcut to the solution but I have my doubts about that..
+
+---
+
+[back](/)
