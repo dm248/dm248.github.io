@@ -4,7 +4,7 @@
 
 ### 
 
-# Curious case of shellsort
+# Curious case of (13,4,1) shellsort
 
 ##### Oct 15, 2020
 
