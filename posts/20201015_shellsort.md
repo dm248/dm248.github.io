@@ -11,7 +11,7 @@ on 25 elements*. The official [solver](https://github.com/dm248/shellsort-13-4-1
 (trying all 25! permutations). So that got me curious, is the problem doable?
 Well, it turns out that it is, though not quite that way (check the [code](https://github.com/dm248/shellsort-13-4-1) on GitHub, if interested).
 
-First off, $$25!$$ is ballpark $$10^25$$, clearly hopeless - one needs to bring the work down to a trillion 
+First off, $$25!$$ is ballpark $$10^{25}$$, clearly hopeless - one needs to bring the work down to a trillion 
 (10^12) or so cases to be in business. Assume that all elements are distinct, and let those be 0...24
 in sorted order (values are irrelevant, only < > relationships matter in sorting anyway). Recall what 
 (13,4,1) shellsort does:
