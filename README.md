@@ -8,10 +8,19 @@
 
 ##### Oct 15, 2020
 
-I tend to think back fondly of good old times when I was a student but I must have had it easy. 
+I tend to think back fondly of the good old times when I was a student but I must have had it easy. 
 Here is an assignment someone else got recently: *Find the worst-case swap count for (13,4,1) shellsort
-of 25 elements*. The official solution was simple, just shy of 1 billion core years to run.
-It turns out that the problem *is* solvable, just not quite that way...
+on 25 elements*. The official solution offered was simple, just shy of 1 billion core years to run
+(trying all 25! permutations). So that got me curious, is the problem doable?
+Well, it turns out that it is,
+[just not quite that way...](/posts/20201015_shellsort.md)
+
+
+# b01lers bootcamp CTF (... placeholder...)
+
+##### Oct 6, 2020
+
+TBA
 
 
 # UIUCTF
