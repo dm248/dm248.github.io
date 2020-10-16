@@ -1,3 +1,6 @@
+---
+usemathjax: true
+---
 # Curious case of (13,4,1) shellsort
 
 ##### Oct 15, 2020
@@ -8,12 +11,12 @@ on 25 elements*. The official [solver](https://github.com/dm248/shellsort-13-4-1
 (trying all 25! permutations). So that got me curious, is the problem doable?
 Well, it turns out that it is, though not quite that way (check the [code](https://github.com/dm248/shellsort-13-4-1) on GitHub, if interested).
 
-First off, 25! is ballpark **10^25**, clearly hopeless - one needs to bring the work down to a trillion 
+First off, $$25!$$ is ballpark $$10^{25}$$, clearly hopeless - one needs to bring the work down to a trillion 
 (10^12) or so cases to be in business. Assume that all elements are distinct, and let those be 0...24
 in sorted order (values are irrelevant, only < > relationships matter in sorting anyway). Recall what 
 (13,4,1) shellsort does:
 it uses insertion sort to [*h*-sort](https://en.wikipedia.org/wiki/Shellsort) the elements 
-first using *h*=13, then by *h*=4, and finally *h*=1.
+first using $$h=13$$, then by $$h=4$$, and finally *h*=1.
 Here, *h*-sorting means separately sorting every subset of elements that are at the same position modulo *h* 
 (there are *h* such subsets given by the position 0...(h-1) of the first element in the set),
 and the result is said to be *h-ordered*.
@@ -23,8 +26,8 @@ the one where S is kept unchanged).
 
 ### Strategy
 
-Suppose the 13-sort does *x* swaps, the 4-sort *y*, and the final 1-sort *z* swaps. Then, in total, 
-there are *x* + *y* + *z* swaps, and we want to maximize this sum. The first step, 13-sort, compares 12 
+Suppose the 13-sort does $$x$$ swaps, the 4-sort $$y$$, and the final 1-sort $$z$$ swaps. Then, in total, 
+there are $$x + y + z$$ swaps, and we want to maximize this sum. The first step, 13-sort, compares 12 
 pairs of elements - at positions (0,13), (1,14), ... (11,24) - so there are 2^12 ways to unsort this. We can 
 always pick the one that takes the maximal swaps to 13-sort, i.e., **x = 12**. Considering the results of 
 the 13-sort, there are still 25! / 2^12 possibilities, far too many to enumerate. Then comes the 
