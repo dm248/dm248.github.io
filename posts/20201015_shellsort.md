@@ -338,7 +338,7 @@ requiring 12 + 57 + 93 = 162 swaps to (13,4,1)-shell-sort.*
 
 While no other sequence could beat this one,
 the astute reader might notice that
-there is a possibility that another sequence might also score the same 162. 
+there is a possibility that another sequence might also score the same 162 swaps. 
 That is because 162 can be reached as 12 + 66 + 84, which our search would have missed
 because we imposed *z* >= 85. However, it turns out that *y* = 66 is impossible for
 a 4-sort on an already 13-ordered sequence. To see that, consider the 13-ordering
