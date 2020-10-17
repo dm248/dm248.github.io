@@ -154,9 +154,9 @@ the array, e.g., if subsequent counter indices are 16 and 18, then location 18 i
 location after where 16 was). 
 
 By maintaining separate lists of available numbers before
-each loop, in each loop you only need 1 pass (2 passes in the innermost one), and you shave off
-about ~5% from the execution time. Helps a bit but with all these tricks the approach 
-still would take roughly *100 core-days* to finish.
+each loop, in each loop you only need 1 pass (2 passes in the innermost one), and you shave
+about ~5% off the execution time. Helps a bit but with all these tricks the approach 
+would still take roughly *100 core-days* to finish.
 
 
 #### Innermost loop speedup
