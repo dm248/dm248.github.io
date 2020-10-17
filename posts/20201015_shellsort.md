@@ -331,7 +331,7 @@ So what is the result after about 35 hours of running?
 It was quite a cliffhanger - the first ~95% of the calculation barely does anything
 because almost all the 160 million candidates are found and processed near the end
 (in retrospect, stepping through counter 1 in reverse order would have been more pragmatic).
-In the end, all candidates were accounted for, and when the dust settled, **the trial sequence**
+In the end, all 159482062 candidates were accounted for, and when the dust settled, **the trial sequence**
 
 * **[18,24,5,11,17,23,4,10,16,22,3,9,12,15,21,2,8,14,20,1,7,13,19,0,6]**
 
