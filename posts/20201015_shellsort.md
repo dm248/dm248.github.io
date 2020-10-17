@@ -7,8 +7,7 @@ usemathjax: true
 
 I tend to think back fondly of the good old times when I was a student but I must have had it easy.
 Here is an assignment someone else got recently: *Find the worst-case input for (13,4,1) shellsort
-on 25 elements*. The official [solver](https://github.com/dm248/shellsort-13-4-1/blob/main/naive_solver.java) offered was simple, just shy of one *billion* core years to run
-(trying all 25! permutations). So that got me curious, is the problem doable?
+on 25 elements*. The official [solver](https://github.com/dm248/shellsort-13-4-1/blob/main/naive_solver.java) offered was simple, just shy of one *billion* core years to run - trying all 25! permutations. So that got me curious, is the problem doable?
 Well, it turns out that it is, though not quite that way (check the [code](https://github.com/dm248/shellsort-13-4-1) on GitHub, if interested).
 
 First off, $$25!$$ is ballpark $$10^{25}$$, clearly hopeless - one needs to bring the work down to a trillion 
