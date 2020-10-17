@@ -298,10 +298,10 @@ early because every other candidate that is left in the loop would contribute th
 the total as the one we are about to skip. With swap-ordered tables of permutations, the search becomes:
 ```python
 threshhold = 150
-swap0 = z
+...
 if z + 66 < threshhold: continue
 for p1 in permutation6_table:
-   swap1 = swap0 + p1.swaps
+   swap1 = z + p1.swaps
    if swap1 + 51 < threshhold: break
    for p2 in permutation6_table:
       swap2 = swap1 + p2.swaps
