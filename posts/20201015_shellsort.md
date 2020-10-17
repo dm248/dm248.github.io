@@ -360,7 +360,7 @@ By condition iv) we have $$d_1 < a_4$$, so:
 
 * $$a_1 > \{a_2, ... a_6, d_1, ... d_7\}$$,
 
-where the set notation here means is that $$a_1$$ is bigger than any number in the set. Then, 
+where the set notation here means that $$a_1$$ is bigger than any number in the set. Then, 
 from condition iii) we have $$c_1 < d_4$$, so
 
 * $$a_1 > \{a_2, ... a_6, c_1, ... c_6, d_1, ... d_7\}$$,
@@ -369,7 +369,7 @@ and from condition ii) we have $$b_1 < c_4$$, thus
 
 * $$a_1 > \{a_2, ... a_6, b_1, ... b_6, c_1, ... c_6, d_1, ... d_7\}$$,
 
-which means that $$a_1$$ is the largest element in the set of 25 numbers. However, that contradicts
+i.e., $$a_1$$ is the largest element in the set of 25 numbers. However, that contradicts
 condition i) that says $$a_1 < b_4$$.
 Thus the sequence found above is unique - *every other permutation requires fewer than 162 swaps to
 sort using (13,4,1) shellsort*.
