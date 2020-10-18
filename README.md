@@ -8,7 +8,7 @@
 
 ##### Oct 15, 2020
 
-I tend to think back fondly of the good old times when I was a student but I must have had it easy. 
+I tend to think back fondly to the good old times when I was a student but I must have had it easy. 
 Here is an assignment someone else got recently: *Find the worst-case input for (13,4,1) shellsort
 on 25 elements*. The official solver offered was simple, just shy of 1 billion core years to
 run - trying all 25! permutations. So that got me curious, is the problem doable?
