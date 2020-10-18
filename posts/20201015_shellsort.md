@@ -335,7 +335,7 @@ In the end, all 159482062 candidates were accounted for, and when the dust settl
 
 * **[18,24,5,11,17,23,4,10,16,22,3,9,12,15,21,2,8,14,20,1,7,13,19,0,6]**
 
-**found in Step 0 turned out to be actually the worst possible(!) 25-element sequence,
+**found in Step 0 actually turned out to be the worst possible(!) 25-element sequence,
 requiring 12 + 57 + 93 = 162 swaps to (13,4,1)-shell-sort.**
 
 While no other sequence could beat this one,
