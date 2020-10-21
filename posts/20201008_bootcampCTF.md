@@ -26,7 +26,7 @@ self to read before the next event:
 * **do more independent testing**. Actually we got lucky on this one because the day before nsnc 
 caught some cut-and-paste printing bugs that affected a LVL 2 challenge or two (I am very thankful 
 because to catch these you actually had to be serious and solve the respective LVL 1 challenge first). 
-So the only real bug that remained was an unintended side-effect of a last-minute server hardening that 
+So the only real bug that remained in the minis was an unintended side-effect of a last-minute server hardening that 
 capped the number of command arguments at 10 (which happened to be too few for one of the challenges).
 
 * **have unit tests for too simple solutions**. The harder one of the two hidden challenges was 
