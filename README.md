@@ -16,11 +16,13 @@ Well, it turns out that it is,
 [just not quite that way...](/posts/20201015_shellsort.md)
 
 
-# b01lers bootcamp CTF (... placeholder...)
+# b01lers bootcamp CTF
 
-##### Oct 6, 2020
+##### Oct 8, 2020
 
-TBA
+We hosted [bootcamp CTF](https://ctftime.org/event/1089) last weekend, This time I kept things easy 
+and made a whole bunch of minichallenges (aka Crypto World). It all went very smoothly, only a few
+minor lessons to [learn from...](/posts/20201008_bootcampCTF.md)
 
 
 # UIUCTF
