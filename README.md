@@ -13,6 +13,7 @@ happened about 10 days ago. I hope that each participant
 had a good time :) With the experience from last year, it went [pretty much 
 flawlessly IMO...](/posts/20210414_bctf.md)
 
+---
 
 # Curious case of (13,4,1) shellsort
 
@@ -25,6 +26,7 @@ run - trying all 25! permutations. So that got me curious, is the problem doable
 Well, it turns out that it is,
 [just not quite that way...](/posts/20201015_shellsort.md)
 
+---
 
 # b01lers bootcamp CTF
 
@@ -35,6 +37,7 @@ This time I went for easy difficulty
 and made a whole bunch of minichallenges (aka Crypto World). Things ran very smoothly, only a few
 minor lessons to [learn from...](/posts/20201008_bootcampCTF.md)
 
+---
 
 # UIUCTF
 
@@ -44,6 +47,7 @@ I tried a couple problems at [UIUCTF](https://ctftime.org/event/1075) last weeke
 mostly. It had an interesting mixture of simple and hard problems with not much in between. Overall,
 it was fun and [educational...](/posts/20200726_UIUCTF.md)
 
+---
 
 # NahamCon 
 
