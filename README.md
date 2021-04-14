@@ -13,7 +13,7 @@ happened about 10 days ago. I hope that each participant
 had a good time :) With the experience from last year, it went [pretty much 
 flawlessly IMO...](/posts/20210414_bctf.md)
 
----
+--
 
 # Curious case of (13,4,1) shellsort
 
