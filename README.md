@@ -8,7 +8,8 @@
 
 ##### Apr 14, 2021
 
-b01lers CTF 2021 happened about 10 days ago. I hope that each participant 
+(b01lers CTF 2021)[https://ctftime.org/event/1259]
+happened about 10 days ago. I hope that each participant 
 had a good time :) With the experience from last year, it went [pretty much 
 flawlessly IMO...](/posts/20210414_bctf2021.md)
 
