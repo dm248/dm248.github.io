@@ -16,6 +16,8 @@ to finally [type it up ...](/posts/20210528_double_XOR.md)
 
 ---
 
+# Some thoughts on b01lers CTF 2021
+
 ##### Apr 14, 2021
 
 [b01lers CTF 2021](https://ctftime.org/event/1259)
