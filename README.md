@@ -4,7 +4,17 @@
 
 ### 
 
-# Some thoughts on b01lers CTF 2021
+# Double XOR
+
+##### May 28, 2021
+If you were wondering about how to solve the Double XOR challenge
+at [b01lers CTF 2021](https://ctftime.org/event/1259),
+then your wait is over. 
+The solver was ready ages ago (to field the problem
+I obviously had to break it first) but it took a looong while
+to finally [type it up ...](/posts/20210528_double_XOR.md)
+
+---
 
 ##### Apr 14, 2021
 
