@@ -13,7 +13,7 @@ Like almost always, the actual thought process leading to the solution
 had its twists and turns - what 
 you will find below is a reasonably rectified path.
 
-The actual challenge was to decrypt [this](https://github.com/b01lers/b01lers-ctf-2021/blob/main/crypto/XOR2/dist/chal2.enc)
+The challenge was to decrypt [this](https://github.com/b01lers/b01lers-ctf-2021/blob/main/crypto/XOR2/dist/chal2.enc)
 specific ciphertext. So you had slightly less than 3000 bytes to work with. The
 challenge repository can be found [here](https://github.com/b01lers/b01lers-ctf-2021/tree/main/crypto/XOR2).
 
