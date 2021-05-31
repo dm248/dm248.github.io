@@ -415,8 +415,8 @@ So, obviously, double XOR encryption is breakable. Based on the above technique,
 it should be possible to make a rigourous estimate
 for just how much ctxt - and CPU ;) - you need to succeed with high probability.
 A related thought is that once you employ natural language constraints, 
-regular XOR encryption can probably be decrypted using much 
-fewer than $$30N$$ ctxt characters...
+regular XOR encryption can probably be decrypted using 
+many fewer than $$30N$$ ctxt characters...
 
 [back](/)
 
