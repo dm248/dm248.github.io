@@ -55,7 +55,7 @@ $$c_i \hat{} c_{i+d} = p_i \hat{} p_{i+d} \ , $$
 i.e., the result is then a property of the plaintext (ptxt) only because the particular key byte drops out. 
 Of course, the key can be anything. If we drew key bytes from a super
 limited pool of {0x00, 0x01}, then guessing the wrong $$d$$ would have a rather small effect
-(which is still measurable, given enough ctxt, primarily because a 0x01 flips spaces, A-s, and a-s with 
+(which is still measurable, given enough ctxt, primarily because a 0x01 swaps spaces, A-s, and a-s with 
 much less frequent !-s, @-s, and `-s). 
 But for uniformly random key bytes, a wrong guess is 
 noticeable with high probability:
