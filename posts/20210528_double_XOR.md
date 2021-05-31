@@ -381,7 +381,9 @@ the next simplest
 shortcut, optimizing two consecutive bytes at a time - positions 0 and 1, then 1 and 2, then 2 and 3, 
 ..., $$N_1 - 2$$ and $$N_1 - 1$$, and finally $$N_1 - 1$$ and $$0$$ again, works amazingly well
 (it is important to wrap around at the end, or else we introduce a subtle bias and may get stuck on 
-an imperfect solution where all bytes of $$K^{(1)}$$ except the first or last one are correct). One full sweep
+an imperfect solution where all bytes of $$K^{(1)}$$ except the first or last one are correct). 
+At the end of the sweep, XOR all $$K^{(1)}$$ bytes with $$K^{(1)}_0$$.
+One full sweep
 then takes $$16^2 N_1 = 256 N_1$$ tries, totally within reach given the typical constraints of a 2-day CTF,
 albeit a tad intensive computationally.
 
