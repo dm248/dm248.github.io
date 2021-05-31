@@ -366,8 +366,8 @@ $$P(p_0, p_1, ..., p_k) = P_1(p_0) P_2(p_1|p_0) P_3(p_2|p_1 p_0) P_4(p_3|p_2 p_1
 Finally, any finite body of text will have holes because low-probability $$n$$-grams may end up missing
 completely,
 and low counts will be statistically unreliable as well. This can be remedied by a 
-clever [smoothing procedure](https://www.ee.columbia.edu/~stanchen/e6884/labs/lab3/x207.html) 
-that gradually falls back onto lower $$n$$-grams in the absence of high $$n$$-gram data
+clever [Witten-Bell smoothing](https://www.ee.columbia.edu/~stanchen/e6884/labs/lab3/x207.html) 
+procedure that gradually falls back onto lower $$n$$-grams in the absence of high $$n$$-gram data
 (the 2TP solver had this too).
 
 
