@@ -176,7 +176,7 @@ pairs correspond to the given key position pair $$(i,j)$$. Then, precisely $$n$$
 terms went into the XOR average $$\bar c$$, some $$k$$ of which were 0, while $$(n-k)$$ of which
 gave 1. The probability for the underlying ptxt bit XOR values to be 0 is $$P_{same}$$. *Assuming* that
 these represented $$n$$ independent measurements, the probability for getting $$k$$ zeroes and $$(n-k)$$
-ones, in the particular order, is
+ones, in whatever particular order, is
 
 $$P_{keep} = P_{same}^k (1 - P_{same})^{n - k} \ .$$
 
