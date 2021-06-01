@@ -320,7 +320,7 @@ mostly right. However, bits 0 and 2 are basically a toss-up.
 #### Adaptive key refinement via $$n$$-grams
 
 The imperfectly reconstructed $$K^{(1)}$$, followed by the single-XOR solver for $$K^{(2)}$$,
-typically gives final reconstructed ptxt consisting of spaces and letters, 
+typically gives final reconstructed ptxt consisting of mostly spaces and letters, 
 and practically always printables, 
 but it is all gibberish.
 Except for character set and character frequencies, 
