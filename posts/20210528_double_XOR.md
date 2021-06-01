@@ -198,6 +198,11 @@ so we need to *flip* when $$P_{same} > 1/2$$ and $$k > n/2$$ (i.e., $$\bar c < 1
 or when $$P_{same} < 1/2$$ and $$k < n/2$$ (i.e., $$\bar c > 1/2$$). Precisely the
 same conditions as in the table above.
 
+**EDIT:** after typing this up, I realized that in the presence of *any* bit asymmetry, i.e.,
+when $$\bar p \ne 1/2$$, we have $$P_{same} > 1/2$$, which always rounds to 1. So only the
+bottom half of the table plays a role, which means that
+the key bit XOR is always the opposite of the ctxt bit XOR.
+
 
 ### Breaking double XOR
 
