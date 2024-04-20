@@ -1,8 +1,20 @@
 ###dm248.github.io
 
-   [[Tarock](https://gentle-citadel-87130.herokuapp.com)]  [[Rubik](https://github.com/dm248/rubik)]
+   [[Rubik](https://github.com/dm248/rubik)]
 
 ### 
+
+# b01lers CTF 2024
+
+##### Apr 19, 2024
+
+Last weekend we hosted [b01lers CTF 2024](https://ctftime.org/event/2250), which was a great success - over 250 teams with at least 1 
+solve. I only contributed two challenges: Zero to Hero (pwn) and Snoopy (crypto). Difficulty levels were aimed at medium and medium-hard, 
+respectively, though I guess Snoopy must have been hard since it had no solves :P Still, no regrets.
+
+If you want to check my own solutions, see [Zero to Hero writeup](/posts/bctf2024_Zero_to_Hero.md) and [Snoopy writeup](/posts/bctf2024_Snoopy.md).
+
+---
 
 # Double XOR
 
