@@ -4,7 +4,7 @@ usemathjax: true
 # Zero to Hero (@ [b01lers CTF 2024](https://ctftime.org/event/2250))
 
 
-This puzzle was a combination of two inspirations: a register wipe challenge that I encountered somewhere (maybe 
+This [puzzle](https://github.com/b01lers/b01lers-ctf-2024-public/tree/main/pwn/zero_to_hero) was a combination of two inspirations: a register wipe challenge that I encountered somewhere (maybe 
 [picoGym](https://picoctf.org/index.html#picogym)?) that used the default`mmap`address and took great care to wipe even the stack(!), and 
 an unintentional solve I once did via an`xmm0`leak.
 
@@ -13,10 +13,13 @@ addition, ASLR is of course enabled on the host. You do get arbitrary code execu
 supplied code is copied to a fixed starting address 0x10000 and executed. However, the chal is seccomped, the only 
 allowed syscall is`exit`=> you have to leak the flag one byte at a time.
 
-Getting just`exit`might have felt anal but there was good reason for that. For example, with ability to`write`to stdout one can 
-bruteforce ALSR in less than a minute :) [Syscalls do not segfault on bad address; rather, they return a meaningful error 
-code.] The alternative would have been running the code in an emulator, which gives much more flexibility in what limits to 
-put on the supplied code - but that looked like too much work to implement.
+Getting just`exit`might have felt anal but there was good reason for that. For example, with ability to`write`to stdout 
+one can bruteforce ASLR in less than a minute :) [Syscalls do not segfault on bad address; rather, they return a 
+meaningful error code.] The alternative would have been running the code in an emulator, which gives us much more 
+flexibility in what limits to put on the supplied code - but that looked like too much work to implement.
+
+Here are two [solvers](https://github.com/b01lers/b01lers-ctf-2024-public/tree/main/pwn/zero_to_hero/solve) from the 
+public bctf2024 repo.
 
 
 #### Step 0

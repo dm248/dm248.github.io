@@ -3,9 +3,13 @@ usemathjax: true
 ---
 # Snoopy (@ [b01lers CTF 2024](https://ctftime.org/event/2250))
 
-This was a crypto chal written in python where you had to leverage side-channel info. The underlying math puzzle was very similar to 
-the subset-sum problem (e.g., knapsack crypto), so it was constructed to be breakable using lattice techniques (LLL). For flavor, the 
-code was infused with some computer and microelectronics related mumbo-jumbo terminology.
+This was a [crypto chal](https://github.com/b01lers/b01lers-ctf-2024-public/tree/main/crypto/snoopy) written in python 
+where you had to leverage side-channel info. The underlying math puzzle was very similar to the subset-sum problem 
+(e.g., knapsack crypto), so it was constructed to be breakable using lattice techniques (LLL). For flavor, the code was 
+infused with some computer and microelectronics related mumbo-jumbo terminology.
+
+Here is the [solver code](https://github.com/b01lers/b01lers-ctf-2024-public/tree/main/crypto/snoopy/solve) from the 
+public bctf2024 repo.
 
 ### Setup and overview
 
@@ -53,7 +57,7 @@ coded some logic that ended the session after 256 encryptions.
 ### Propagation algorithm
 
 The algorithm first randomized the $$63\times 63$$ inside points, and then repeatedly replaced that inside square with a new one in which 
-each point had the average of the preceeding values of its four nearest neighbors. (Notice that for edges of this inside square, i.e., 
+each point had the average of the preceding values of its four nearest neighbors. (Notice that for edges of this inside square, i.e., 
 rows 1 & 63 and columns 1 & 63 of the full "die", these neighbors include the "pins" on the perimeter of the full die). Replacement went 
 on until the maximum per-site change along the square was less than $$\epsilon = 10^{-14}$$, or until 200,000 iterations were reached in 
 which case the chal bailed out with an error.
@@ -158,7 +162,7 @@ Inferring outside triangles:
 
 *These outside points give no new information either*, of course. I did not want people to try getting to the original inputs in such a 
 direct way, however, so there was a requirement to have a minimum gap of 10 points between the edges of the grid and the snoop rectangle. 
-More importantly, thinking about the problem this way tells you that **snoop loops that have the same set of inferrable points 
+More importantly, thinking about the problem this way tells you that **snoop loops that have the same set of inferable points 
 (circumference + inside + outside) provide identical information**. So instead of the 7x8 loop in the figure below, one could have chosen, 
 equivalently, a 3x12, 5x10, 9x6, 11x4 or 13x2 loop. These loops all have the same circumference.
 
@@ -240,7 +244,7 @@ versa.
 The 172 bits extracted via LLL give us the AES encrypted flag, apart from 4 missing bits, and 6 of the 8 random bytes used for the AES 
 key. Encryption mode was ECB, so we know that there are exactly 16 bytes inside the flag (and there is no padding), or else the AES 
 encryption routine would have complained. This is too long for attacks on the flag itself, so just generate all 16 possible ciphertexts, 
-decrypt those with all the 65536 possible key completions, and check whether the result is printable (has ascii values 0x21 - 0x80). The 
+decrypt those with all the 65536 possible key completions, and check whether the result is printable (has ASCII values 0x20 - 0x7f). The 
 calculation takes roughly a minute in python. 
 
 There is a modest probability for getting a viable candidate by pure chance, about 
@@ -250,10 +254,28 @@ $$P = 1 - [1 - (96 / 256)^{16}]^{2^{20}} \approx 15\%$$
 if we assume each decrypted byte is uniformly random and independent. When that happens, one can 
 just apply common sense to select the right flag or redo the challenge to see which flag candidate is stable.
 
-### Some other design considerations
+### Some design considerations
 
-TBA
+The idea of doing subset sum with vectors came fairly early but it took some tweaking to get it to work. Originally the 
+plan was to just put the 16-byte ctxt block plus a 16-byte key on the perimeter (total 256 bits), however, LLL always 
+missed the correct solution. It was the usual culprit - "fake" short vectors in the lattice that did not use the target 
+vector (last row of the input lattice) at all. Specifically, the worst was that responses to a high input at opposite 
+sides right near a corner of the grid (e.g., at (0,1) vs (1,0)) are almost identical, so LLL can just happily take 
+their difference to construct rather small vectors.
 
+I almost settled on having only 128 unknown bits away from corners, which would have been a problem with a few rounds 
+of "here is the key, snoop the ctxt for some random ptxt, and give me the ptxt" but that felt less ballsy than giving 
+people direct encryptions of the actual flag. A variant of that idea was to spread the 16-byte ctxt along all four 
+edges of the grid in a way that near each corner we only use bits on one side of the corner - a simple way to do this 
+was having "memory" locations increment by the equivalent of 2 bytes at a time (the in-chal story for this was 
+"historical limitations" just like, e.g., for a QWERTY keyboard). Eventually I realized, however, that LLL does work 
+fine even when I put unknown bits along both sides near - up to two - corners. Which then led to the final arrangement 
+in the problem.
+
+The $$O(10^6)$$ bruteforce was a standard play-it-safe ingredient - you normally want a solve to take at least a 
+minute to prevent people from constantly rerolling for a luckier problem. The key only had 64 bits of entropy, 
+a super-determined team could make a million connections during a two-day competition, and who knows what computing resources 
+people might have at their disposal.. :)
 
 ---
 
